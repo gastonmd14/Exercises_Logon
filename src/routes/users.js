@@ -2,19 +2,16 @@ var express = require('express');
 var router = express.Router();
 const controller = require('../controllers/users')
 
-/* GET home page. */
+/* GET Login page. */
 router.get('/login', function(req, res, next) {
   res.render('users/login', { title: 'Login', script: 'login' });
 });
 
+/* GET Register page. */
+router.get('/register', controller.register);
 
-
-/* GET home page. */
-router.get('/register', controller);
-
-router.post('/register', function(req, res, next) {
-  res.render('users/register', { title: 'Register', script: 'register', err: 'err'});
-});
+/*POST Register page */
+router.post('/register', controller.storeRegister);
 
 
 module.exports = router;
