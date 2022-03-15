@@ -33,7 +33,7 @@ a {
 .cfo {color: var(--bg-orange);}
 .cfw {color: var(--bg-white);}
 .bt {border-top: solid 1px var(--bg-red);}
-.bcr {border-color:var(--bg-red) ;}
+.bcr {border-color:var(--bg-yellow) ;}
 .bcw {border-color: var(--bg-white);}
 .ft {font-family: 'Fredoka', sans-serif;}
 .fz12 {font-size: 12px;}
