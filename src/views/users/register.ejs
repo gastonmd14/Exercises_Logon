@@ -1,36 +1,29 @@
-  <%- include("./partials/head")  %>
+  <%- include("../partials/head")  %>
 
   <body>
 
-    <%- include("./partials/header")  %>
+    <%- include("../partials/header")  %>
 
     <div class="m20 df fdc">
       <div class="df p10 m20 asc">
-        <h1>REGISTER</h1>
+        <h1 class="ft">REGISTER</h1>
       </div>
       <form id="Register" class="df fdc p20" action="/" method="POST">
-        <div class="m10-0-10-0 df fdc">
-          <label class="m0-0-10-0 cfo ft" for="userName">USERNAME</label>
-          <input class="p10 br bcr" type="text" name="userName" id="userName">
-        </div>
         <div class="m10-0-10-0 df fdc">
           <label class="m0-0-10-0 cfo ft" for="email">E-MAIL</label>
           <input class="p10 br bcr" type="email" name="email" id="email">  
         </div>
-        <div class="m10-0-10-0 df fdc">
-          <label class="m0-0-10-0 cfo ft" for="firstName">FIRSTNAME</label>
-          <input class="p10 br bcr" type="text" name="firstName" id="firstName">  
-        </div>
-        <div class="m10-0-10-0 df fdc">
-          <label class="m0-0-10-0 cfo ft" for="lastName">LASTNAME</label>
-          <input class="p10 br bcr" type="text" name="lastName" id="lastName">  
+        <div class="dn">
+          <li>
+            <h1><%=  %></h1>
+          </li>
         </div>
         <div class="m10-0-10-0 df fdc">
           <label class="m0-0-10-0 cfo ft" for="password">PASSWORD</label>
           <input class="p10 br bcr" type="password" name="password" id="password">     
         </div>
         <div class="m10-0-10-0 df fdc">
-          <label class="m0-0-10-0 cfo ft" for="retype password">RETYPE PASSWORD</label>
+          <label class="m0-0-10-0 cfo ft" for="retype password">RE-TYPE PASSWORD</label>
           <input class="p10 br bcr" type="password" name="retype password" id="retype password">     
         </div>
         <div class="df m10 p10 asc">
@@ -40,6 +33,6 @@
       </form>
     </div>
 
-    <%- include("./partials/footer")  %>
+    <%- include("../partials/footer")  %>
     
   </body>

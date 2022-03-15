@@ -6,15 +6,22 @@ window.addEventListener('load', function() {
 
         let err = [];
 
-        let inputFirstName = document.getElementById('firstName');
+        let inputEmail = document.getElementById('email');
 
-        if (inputFirstName.value == '') err.push('Field Required');
+        if (inputEmail.value == '') err.push('Email Required');
 
-        console.log(err);
+        let inputPassword = document.getElementById('password');
 
-        if (err > 0) {
+        if (inputPassword.value == '') err.push('Password Required');
 
-            console.log('Hay errores');
+        let inputRetypePassword = document.getElementById('retype password');
+
+        if (inputRetypePassword.value == '') err.push('Retype Password Required');
+
+        
+        if (err.length > 0) {
+
+            console.log(err);
             
             e.preventDefault();
             
