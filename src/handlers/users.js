@@ -1,10 +1,6 @@
 const repository = require('../services/repositories/users')
 
-
-const createUser = (user) => {
-    repositories.persist(user);
-}
-
+const createUser = async user => await repository.persist(user);
 
 module.exports = {
     createUser

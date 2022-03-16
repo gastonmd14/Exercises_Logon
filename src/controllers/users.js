@@ -14,10 +14,10 @@ router.get('/register', (req, res, next) => {
 });
 
 /*POST Register page */
-router.post('/register', () => {
+router.post('/register', async (req, res, next) => {
     try {
         const user = req.body;
-        const result = handler.storeRegister(user);
+        const result = handler.createUser(user);
         console.log(result, 'Usuario Creado');
     } catch (e) {
         console.log('Error: ', e);
