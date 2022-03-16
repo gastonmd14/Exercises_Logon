@@ -1,3 +1,11 @@
-const repositories = require('../services/repositories/users')
+const repository = require('../services/repositories/users')
 
-const createOne = () => {};
+
+const createUser = (user) => {
+    repositories.persist(user);
+}
+
+
+module.exports = {
+    createUser
+};
