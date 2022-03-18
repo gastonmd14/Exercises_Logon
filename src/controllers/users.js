@@ -4,13 +4,13 @@ const handler = require('../handlers/users')
 
 /* GET Login page. */
 router.get('/login', function(req, res, next) {
-    res.render('users/login', { title: 'Login', script: 'login' });
+    res.render('users/login', { title: 'Login', styles:'login', script: 'login' });
   });
   
 
 /* GET Register page. */
 router.get('/register', (req, res, next) => {
-    res.render('users/register', { title: 'Register', script: 'register', err: 'err'});
+    res.render('users/register', { title: 'Register', styles:'register', script: 'register', err: 'err'});
 });
 
 /*POST Register page */
