@@ -1,16 +1,33 @@
-const { userModel } = require('../../models/user')
+const { User } = require('../../models');
+const bcrypt = require('bcryptjs');
 
-const persist = async (user) => {
+const storeUser = async (user) => {
     try {
         const userToCreate = user;
-        const result = await userModel.create(userToCreate);
-        return result;
-    } catch (e) {
-        console.log('Error: ', e);
+        console.log(userToCreate, '700');
+        // userToCreate.password = bcrypt.hashSync(user.password, 8);
+        // const result = await User.create(userToCreate);
+        // return result;
+    } catch (err) {
+        console.log(err);
     }
 };
 
+const getOne = async (user) => {
+    try {
+        const userToFind = user;
+        const result = await User.findOne({
+            where: {
+                email: userToFind.email
+            }
+        });
+        return result;
+    } catch (error) {
+        console.log(err);
+    }
+};
 
 module.exports = {
-    persist
+    storeUser,
+    getOne
 };
