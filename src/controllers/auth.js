@@ -3,18 +3,18 @@ var router = express.Router();
 const handler = require('../handlers/users')
 
 /* GET Login page. */
-router.get('/login', function(req, res, next) {
-    res.render('users/login', { title: 'Login', styles:'login', script: 'login' });
+router.get('/signin', (req, res, next) => {
+    res.render('auth/signin', { title: 'signin', styles:'signin', script: 'signin' });
   });
   
 
 /* GET Register page. */
-router.get('/register', (req, res, next) => {
-    res.render('users/register', { title: 'Register', styles:'register', script: 'register', err: 'err'});
+router.get('/signup', (req, res, next) => {
+    res.render('auth/signup', { title: 'signup', styles:'signup', script: 'signup', err: 'err'});
 });
 
 /*POST Register page */
-router.post('/register', async (req, res, next) => {
+router.post('/signup', async (req, res, next) => {
     try {
         const user = req.body;
         const result = handler.createUser(user);
